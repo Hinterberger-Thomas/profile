@@ -62,7 +62,7 @@ const Skill: Component<SkillsProps> = ({ index, children }) => {
 			class="text-white  text-5xl font-bold max-md:text-3xl"
 			style={{
 				opacity: `${index === activeText() ? 1 : 0.2}`,
-				transition: "all 0.5s linear",
+				transition: "opacity 0.5s linear",
 			}}
 		>
 			{children}
