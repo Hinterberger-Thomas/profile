@@ -2,21 +2,16 @@
 import { MySkills } from "../components/MySkills";
 import {  MyAttributes} from "../components/MyAttributes";
 import Layout from "../layouts/Layout.astro";
+import Me from "../components/Me.astro";
+import WorkedWithCompanies from "../components/WorkedWithCompanies.astro";
 ---
 
 <Layout title="Thomas-Hinterbeger">
 	<main>
-		<section
-			class="p-10 text-center font-bold space-y-7 h-[110vh] justify-center max-w-4xl m-auto flex flex-col items-center"
-		>
-			<h1 class="max-sm:text-3xl text-7xl">Thomas Hinterberger</h1>
-			<h2 class="max-sm:text-2xl text-5xl text-gray-600">
-				I am an indi developer who <span class="text-red-600">♥</span> coding
-				and 🍵
-			</h2>
-		</section>
+		<Me />
 		<MySkills client:idle />
 		<MyAttributes client:idle/>
+		<WorkedWithCompanies />
 	</main>
 </Layout>
 
