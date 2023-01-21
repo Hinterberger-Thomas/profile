@@ -1,4 +1,6 @@
 ---
+import { MySkills } from "../components/MySkills";
+import {  MyAttributes} from "../components/MyAttributes";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -14,6 +16,7 @@ import Layout from "../layouts/Layout.astro";
 			</h2>
 		</section>
 		<MySkills client:idle />
+		<MyAttributes client:idle/>
 	</main>
 </Layout>
 
