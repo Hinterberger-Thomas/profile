@@ -1,10 +1,13 @@
 import { Component, JSX, onCleanup, onMount } from "solid-js";
 
+const blur = "blur-sm";
+
 const observer = new IntersectionObserver((entries) => {
 	entries.forEach((v) => {
 		if (!v.isIntersecting) return;
 		observer.unobserve(v.target);
 		v.target.classList.add("translate-x-[100%]");
+		v.target.classList.remove(blur);
 	});
 });
 
@@ -58,10 +61,10 @@ const Attribute: Component<AttributeProps> = ({ children }) => {
 			style={{
 				position: "relative",
 				left: "-100%",
-				transition: "all 1s",
+				transition: "transform 1s, filter 1s",
 			}}
 			ref={(el) => (ref = el)}
-			class="text-3xl max-md:text-xl"
+			class={`text-3xl max-md:text-xl ${blur}`}
 		>
 			{children}
 		</p>
