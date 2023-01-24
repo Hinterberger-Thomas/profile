@@ -1,0 +1,82 @@
+---
+import { Image, Picture } from "@astrojs/image/components";
+
+interface Props {
+    heigths: number | string;
+}
+
+const { heigths } = Astro.props;
+---
+
+<div class="flex gap-5">
+    <Image
+        aspectRatio="1:1"
+        height={heigths}
+        alt="Apple logo"
+        src="/src/lib/assets/Apple-Logo-Design.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="433:259"
+        height={heigths}
+        alt="Firefox logo"
+        src="/src/lib/assets/Firefox-Logo-Design-2017.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="1000:600"
+        height={heigths}
+        alt="Google logo"
+        src="/src/lib/assets/Google-Logo-Design.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="16:9"
+        height={heigths}
+        alt="IBM logo"
+        src="/src/lib/assets/IBM-Company-Logo-Design.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="16:9"
+        height={heigths}
+        alt="Microsoft logo"
+        src="/src/lib/assets/Microsoft-Logo-Design.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="1:1"
+        height={heigths}
+        alt="Shell logo"
+        src="/src/lib/assets/Shell-Logo-Design.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="16:9"
+        height={heigths}
+        alt="Walmart logo"
+        src="/src/lib/assets/Walmart-Logo-Design.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="16:9"
+        height={heigths}
+        alt="Walmart logo"
+        src="/src/lib/assets/cisco-logo.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="16:9"
+        height={heigths}
+        alt="Walmart logo"
+        src="/src/lib/assets/oracle-logo.webp"
+        format={"avif"}
+    />
+    <Image
+        aspectRatio="16:9"
+        height={heigths}
+        alt="Walmart logo"
+        src="/src/lib/assets/walt-disney-logo.webp"
+        format={"avif"}
+    />
+</div>

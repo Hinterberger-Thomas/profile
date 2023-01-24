@@ -31,7 +31,7 @@ export const MySkills = () => {
 			)
 				setActiveText(i);
 		});
-	}, 350);
+	}, 200);
 
 	onCleanup(async () => {
 		clearInterval(interval);

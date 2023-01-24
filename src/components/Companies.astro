@@ -1,0 +1,29 @@
+---
+import Logos from "./Logos.astro";
+---
+
+<div class="w-full ">
+    <h3>I worked with many differnt companies</h3>
+    <div class="relative max-w-[960px] overflow-hidden h-[100px] left-[50%] translate-x-[-50%]">
+        <div class="animation absolute flex w-[1962px] gap-5">
+            <Logos heigths={50} />
+            <Logos heigths={50} />
+        </div>
+    </div>
+</div>
+
+<style>
+    @keyframes scroll {
+        0% {
+            left: 0;
+        }
+        100% {
+            left: calc(-1982px / 2);
+        }
+    }
+
+    .animation {
+        animation: scroll 10s linear Infinite;
+        block-size: fit-content;
+    }
+</style>

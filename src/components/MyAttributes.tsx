@@ -17,7 +17,7 @@ export const MyAttributes = () => {
 	});
 	return (
 		<section class="100vh h-[100vh] grid place-items-center">
-			<div class="grid max-w-5xl h-full p-10">
+			<div class="grid max-w-5xl h-full p-10 overflow-hidden">
 				<Attribute>
 					<b>I will help you ship better apps</b>, faster. I have created the
 					best user experiences in some of the most popular apps worldwide.
@@ -50,7 +50,7 @@ type AttributeProps = {
 	children: JSX.Element;
 };
 
-const Attribute: Component<AttributeProps> = ({ children }) => {
+const Attribute: Component<AttributeProps> = ({ children}) => {
 	let ref: HTMLParagraphElement | undefined;
 	onMount(() => {
 		if (!ref) return;
@@ -64,7 +64,7 @@ const Attribute: Component<AttributeProps> = ({ children }) => {
 				transition: "transform 1s, filter 1s",
 			}}
 			ref={(el) => (ref = el)}
-			class={`text-3xl max-md:text-xl ${blur}`}
+			class={`text-3xl max-lg:text-xl max-sm:text-base ${blur}`}
 		>
 			{children}
 		</p>
