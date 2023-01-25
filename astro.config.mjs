@@ -4,17 +4,17 @@ import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
-import solidJs from "@astrojs/solid-js";
+import compress from "astro-compress";
 
 // https://astro.build/config
 import image from "@astrojs/image";
 
 // https://astro.build/config
-import compress from "astro-compress";
+import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), solidJs(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), compress()]
+  integrations: [tailwind(), compress(), image({
+    serviceEntryPoint: '@astrojs/image/sharp'
+  }), solidJs()]
 });
